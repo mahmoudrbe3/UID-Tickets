@@ -1,0 +1,406 @@
+::selection {
+    color: $color-Secondary;
+    background: rgba($color-Primary, 0.5);
+}
+.flx_bx{
+    @extend %flx-bx;
+    
+}
+.flx_end{
+    justify-content: flex-end;
+}
+.flx_start{
+    justify-content: flex-start;
+}
+.flx_btwn{
+    justify-content: space-between;
+}
+
+
+.inner_pg{
+    margin-bottom: 20px;
+}
+/*  button */
+.btn{
+    height: 32px;
+    line-height: 32px;
+    border-radius: 8px;
+    text-align: center;
+    padding: 0;
+    @extend %flx-bx;
+    @extend %transation;
+    
+        &.btn_back{
+            background: #E7EAED;
+            color: #292D32;
+            width: 32px;
+            margin-inline-end: 7px;
+            @extend %transation;
+
+                i{
+                    font-size: 13px;
+                    @extend %transation;
+                }
+        }
+
+        &.btn_outline{
+            padding: 0 8px;
+            background: #F9F9F9;
+            border: 1px solid #E9EAEA !important;
+            color: $color-Secondary;
+            font-size: 14px;
+            font-weight: 500;
+            @extend %transation;
+
+
+            i{
+                margin-inline-end: 8px;
+                color: $color-Primary;
+                @extend %transation;
+            }
+
+                &:hover{
+                    background: $color-Primary;
+                    border: 1px solid $color-Primary !important;
+                    color: $color-white;
+                    @extend %transation;
+
+                        i{
+                            color: $color-white;
+                            @extend %transation;
+                        }
+                }
+
+        }
+
+        &.btn_outline2{
+            padding: 0 8px;
+            background: transparent;
+            border: 1px solid $color-white !important;
+            color: $color-white;
+            font-size: 14px;
+            font-weight: 500;
+            @extend %transation;
+
+            i{
+                margin-inline-end: 8px;
+                color: $color-white;
+                @extend %transation;
+            }
+
+                &:hover{
+                    background: $color-white;
+                    border: 1px solid $color-white !important;
+                    color: $color-Primary;
+                    @extend %transation;
+
+                        i{
+                            color: $color-Primary;
+                            @extend %transation;
+                        }
+                }
+        }
+
+        &.btn_outline3{
+            height: 38px;
+            line-height: 38px;
+            width: 38px;
+            background: $color-white;
+            border: 1px solid rgba(146, 161, 173, 0.4) !important;
+            color: #8B8B8B;
+            text-align: center;
+            margin-inline-start: 7px;
+            @extend %transation;
+
+            i{
+                color: #8B8B8B;
+                @extend %transation;
+            }
+
+                &:hover{
+                    background: $color-Primary;
+                    border: 1px solid $color-Primary !important;
+                    @extend %transation;
+
+                        i{
+                            color: $color-white;
+                            @extend %transation;
+                        }
+                }
+        }
+
+        &.btn_st{
+            background: $color-Primary;
+            border: 1px solid $color-Primary !important;
+            font-size: 14px;
+            font-weight: 500;
+            color: $color-white;
+            padding: 0 10px;
+            height: 38px;
+            line-height: 38px;
+            @extend %transation;
+
+                &:hover{
+                    background: $color-white;
+                    border: 1px solid #E9EAEA  !important;
+                    color: $color-Primary;
+                    @extend %transation;
+                }
+        }
+
+}
+
+
+.fa-arrow-right-arrow-left{
+    transform: rotate(90deg);
+}
+
+/* title box */
+.title_bx{
+    margin-bottom: 14px;
+
+        h1{
+            font-size: 16px;
+            font-weight: 600;
+            color: $color-Secondary;
+        }
+}
+
+.titleCard_bx{
+
+        h1{
+            font-size: 14px;
+            font-weight: 600;
+            color: $color-Secondary;
+            margin-bottom: 10px;
+        }
+    
+}
+
+
+/* prime NG */
+.p-calendar {
+    
+    .p-inputtext, .p-button-icon-only{
+        border: none !important;
+        padding: 0 !important;
+        border-radius: 0 !important;
+        color: #92A1AD !important;
+        font-size: 14px;
+            font-weight: 600;
+    }
+    .p-inputtext{
+        width: 227px !important;
+    }
+
+    .p-button-icon-only{
+        background: none !important;
+        color: #92A1AD !important;
+        width: initial !important;
+        padding: 0 2px !important;
+    }
+
+}
+
+.p-dropdown{
+    height: 30px;
+    line-height: 30px;
+    padding: 0 12px;
+    border: 1px solid #E8E8E8;
+    border-radius: 8px;
+    background: #FAFAFA;
+
+    .p-dropdown-label{
+        margin-inline-end: 8px;
+        font-size: 14px;
+            font-weight: 600;
+            color: $color-Secondary;
+    }
+    .p-dropdown-label, .p-dropdown-trigger{
+        padding: 0;
+        width: initial;
+    }
+    .p-dropdown-trigger{
+        
+        svg{
+            font-size: 12px;
+        color: #898989;
+        }
+    }
+}
+
+.p-dropdown:not(.p-disabled).p-focus{
+    border-color: $color-Primary;
+    outline: 0;
+    box-shadow: none;
+}
+
+.p-dropdown-panel .p-dropdown-items .p-dropdown-item.p-highlight {
+    color: #8a74f9;
+    background: #f3f1fe;
+}
+
+
+/* calander */
+.p-calendar .p-datepicker {
+    max-width: 320px;
+    min-width: initial!important
+}
+
+.p-datepicker-header {
+    background: $color-Primary !important
+}
+
+.p-datepicker .p-datepicker-header .p-datepicker-title .p-datepicker-year,.p-datepicker .p-datepicker-header .p-datepicker-title .p-datepicker-month,.p-datepicker-header,.p-datepicker .p-datepicker-header .p-datepicker-prev,.p-datepicker .p-datepicker-header .p-datepicker-next {
+    color: #fff!important
+}
+
+.p-datepicker-calendar thead tr {
+    color: $color-Primary !important;
+    font-size: 14px!important;
+    font-weight: 600!important
+}
+
+.p-datepicker td>span {
+    font-weight: 700;
+    font-size: 18px
+}
+
+.p-datepicker table th {
+    text-align: center
+}
+
+.p-datepicker table td>span.p-highlight {
+    color: #fff!important;
+    background: $color-Primary !important
+}
+
+.p-datepicker table td>span {
+    width: 28px!important;
+    height: 28px!important;
+    line-height: 28px!important;
+    text-align: center!important;
+    color: #0a0a0a!important;
+    font-size: 14px!important;
+    font-weight: 600!important
+}
+
+.p-datepicker .p-yearpicker .p-yearpicker-year,.p-datepicker .p-monthpicker .p-monthpicker-month {
+    text-align: center!important;
+    color: #0a0a0a!important;
+    font-size: 14px!important;
+    font-weight: 600!important;
+    margin: 2px!important;
+    box-sizing: border-box!important;
+    width: 48%!important
+}
+
+.p-datepicker .p-monthpicker .p-monthpicker-month {
+    width: 30%!important
+}
+
+.p-datepicker .p-timepicker span {
+    color: #0a0a0a!important;
+    font-size: 14px!important;
+    font-weight: 600!important
+}
+
+.p-calendar {
+    width: 100%!important
+}
+
+.p-datepicker-prev svg{
+    transform: rotate(185deg);
+}
+
+.p-datepicker-next svg{
+    transform: rotate(-185deg);
+}
+
+.p-dropdown-items{
+    padding: 0 !important;
+
+        li{
+            padding: 4px !important;
+            text-align: center;
+        }
+}
+
+.p-datepicker table td.p-datepicker-today > span{
+    background: rgba($color-Primary, 0.1) !important;
+    color: $color-Primary !important;
+}
+
+/* tooltip */
+.p-tooltip{
+    font-family: 'Noto Kufi Arabic', sans-serif !important;
+    
+           .p-tooltip-text	{
+            color: $color-white;
+            font-size: 14px;
+            font-weight: 400;
+            background: $color-Secondary !important;
+        }
+}
+
+.p-tooltip.p-tooltip-bottom .p-tooltip-arrow {
+    border-bottom-color: $color-Secondary !important;
+}
+.p-tooltip.p-tooltip-top .p-tooltip-arrow {
+    border-top-color: $color-Secondary !important;
+}
+
+
+ /* Toaster */
+ .p-toast .p-toast-message .p-toast-message-content .p-toast-message-icon{
+    margin-inline-end: 8px;
+ }
+
+
+ /* inputs */
+.p-input-icon-right{
+    height: 36px;
+    line-height: 36px;
+
+        i{
+            color: #292D32 !important;
+        }
+}
+.p-inputtext:enabled:hover, .p-inputtext:enabled:focus{
+    border-color: $color-Primary;
+    outline: 0;
+    box-shadow: none;
+}
+
+
+.p-inputtext{
+    padding: 0 4px;
+    color: rgba(#92A1AD, 0.4);
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* MODAL POPUP */
+.p-dialog-header, .p-sidebar-header{
+    @extend %flx-bx;
+    justify-content: space-between;
+
+    h1{
+        font-size: 16px;
+        font-weight: 600;
+        color: $color-Secondary;
+    }
+
+    .p-sidebar-icon{
+        margin-left: initial;
+    }
+}
+
+    
+/* pagging */
+
+
+
+
+
+

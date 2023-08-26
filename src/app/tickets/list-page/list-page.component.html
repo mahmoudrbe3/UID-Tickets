@@ -1,0 +1,469 @@
+<div class="ticket_pg">
+
+    <div class="mainInfo_bx">
+      <div class="title_bx">
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <div class="flx_bx flx_start">
+              <a class="btn btn_back" pTooltip="عودة للصفحة السابقة" tooltipPosition="top"><i class="pi pi-arrow-right"></i></a>
+              <h1>تذكرة رقم <span>#2342</span></h1>
+            </div><!-- END c/flx_bx -->
+          </div><!-- END c/col-12 -->
+          <div class="col-12 col-md-6 flx_bx flx_end">
+              <a href="" class="btn btn_outline">
+                <i class="fa-regular fa-pen-to-square"></i>
+                <span>تعديل</span>
+              </a>
+          </div><!-- END c/col-12 -->
+        </div><!-- END c/row -->
+      </div><!-- END c/title_bx -->
+      <article>
+          <div class="row">
+             <div class="col-12 col-md-8">
+                <div class="chart_bx">
+                    <div class="titleCard_bx">
+                        <div class="flx_bx flx_btwn">
+                          <div class="start_bx">
+                            <h1>إحصائيات إستخدام القسيمة</h1>
+                            <p-calendar selectionMode="range" [readonlyInput]="true" [showIcon]="true" icon="pi pi-angle-down" placeholder="05 يوليو , 2023 - 05 أغسطس , 2023"></p-calendar>
+                          </div><!-- END c/start_bx -->
+                          <div class="end_bx">
+                            <p-dropdown [options]="cities" optionLabel="name"></p-dropdown>
+                          </div><!-- END c/end_bx -->
+                        </div><!-- END c/flx_bx -->
+                    </div><!-- END c/titleCard_bx -->
+                    <div class="chartArea_bx">
+                      <p-chart type="line" [data]="data" [options]="options" height="168px"></p-chart>
+                    </div><!-- END c/chartArea_bx -->
+                </div><!-- END c/chart_bx -->
+             </div><!-- END c/col -->
+             <div class="col-12 col-md-4">
+                <div class="ticketInfo_bx">
+                      <div class="top_card">
+                        <a class="btn btn_wthoutline" pTooltip="حذف" tooltipPosition="bottom"><i class="fa-regular fa-trash-can"></i></a>
+                          <h1>عرض التذكرة الخاصة بالفيلم</h1>
+                          <div class="flx_bx flx_btwn">
+                            <p>www.tazkty.com/473847</p>
+                           <div class="card">
+                            <p-toast></p-toast>
+                            <a pTooltip="نسخ الرابط" tooltipPosition="bottom" pRipple (click)="show()"><i class="fa-regular fa-copy"></i></a>
+                           </div>
+                          </div><!-- END c/flx_bx -->
+                           <h3>فعال حتي 15 يوليو 2023</h3>
+                      </div><!-- END c/ticketInfo_bx -->
+                      <div class="bottom_card">
+                        <div class="flx_bx flx_btwn">
+                          <div class="start_bx offer_bx flx_bx flx_start">
+                              <h2>
+                                خصم
+                                <span>25%</span>
+                              </h2>
+                              <a (click)="showDialog()" class="btn btn_outline2"><i class="pi pi-send"></i> مشاركة</a>
+                          </div><!-- END c/flx_bx -->
+                          <div class="end_bx qr_bx">
+                              <img src="assets/images/atechnologies.svg" alt="image" pTooltip="امسح الرمز" tooltipPosition="top">
+                          </div><!-- END c/flx_bx -->
+                        </div><!-- END c/flx_bx -->
+                      </div><!-- END c/ticketInfo_bx -->
+                </div><!-- END c/ticketInfo_bx -->
+             </div><!-- END c/col -->
+          </div><!-- END c/row -->
+      </article>
+    </div><!-- END c/mainInfo_bx -->
+
+    <div class="gridView_bx">
+      <div class="title_bx">
+        <div class="row">
+          <div class="col-12 col-md-8">
+              <div class="flx_bx flx_start">
+                <h1>مبيعات التذاكر</h1>
+                <span class="p-input-icon-right">
+                  <i class="pi pi-search"></i>
+                  <input type="text" pInputText placeholder="بحث عن ..." />
+                </span>
+                <button class="btn btn_outline3" pTooltip="بحث متقدم" tooltipPosition="top"> 
+                  <i class="fa-solid fa-sliders"></i>
+                </button>  
+                <button class="btn btn_outline3" pTooltip="ترتيب" tooltipPosition="top"> 
+                  <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                </button>  
+              </div><!-- END c/flx_bx -->
+          </div><!-- END c/col -->
+          <div class="col-12 col-md-4">
+            <div class="flx_bx flx_end">
+              <div class="form-check form-switch">
+                <label class="form-check-label" for="flexSwitchCheckDefault">مفعلة</label>
+                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" checked>
+              </div>
+                <button class="btn btn_st" (click)="sidebarVisible = true"> 
+                  حجز تذكرة جديدة
+                </button> 
+            </div><!-- END c/flx_bx -->
+          </div><!-- END c/col -->
+        </div><!-- END c/row -->
+      </div><!-- END c/title_bx -->
+      <article>
+        <div class="grid_bx">
+          <div class="table-responsive">
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th>
+                    <div>
+                      #
+                    </div>
+                  </th>
+                  <th>
+                    <div>
+                      المستخدم
+                    </div>
+                  </th>
+                  <th>
+                    <div>
+                      رقم التذكرة
+                    </div>
+                  </th>
+                  <th>
+                    <div>
+                      قيمى التذكرة
+                      <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="customWidth_320p">
+                      السينمات
+                    </div>
+                  </th>
+                  <th>
+                    <div>
+                      عدد الأشخاص
+                    </div>
+                  </th>
+                  <th>
+                    <div>
+                      عدد مرات الشراء
+                    </div>
+                  </th>
+                  <th>
+                    <div>
+                      التذكرة
+                    </div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div>
+                      1
+                    </div>
+                  </td>
+                  <td>
+                    <div>
+                        <div class="flx_bx flx_start">
+                          <div class="img">
+                            <img src="../assets/images/Image-30.png" alt="image">
+                          </div>
+                          <div class="txt">
+                            <h4>محمد الغريب</h4>
+                            <p>0123456789</p>
+                          </div>
+                        </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div>
+                      C-101
+                    </div>
+                  </td>
+                  <td>
+                    <div>
+                      $40
+                    </div>
+                  </td>
+                  <td>
+                    <div class="customWidth_320p" pTooltip="سينما مصر , مول العرب , برج الأطنان , سرايا القبة سينما مصر , مول العرب , برج الأطنان , سرايا القبة سينما مصر , مول العرب , برج الأطنان , سرايا القبة سينما مصر , مول العرب , برج الأطنان , سرايا القبة" tooltipPosition="top">
+                        سينما مصر , مول العرب , برج الأطنان , سرايا القبة سينما مصر , مول العرب , برج الأطنان , سرايا القبة سينما مصر , مول العرب , برج الأطنان , سرايا القبة سينما مصر , مول العرب , برج الأطنان , سرايا القبة 
+                    </div>
+                  </td>
+                  <td>
+                    <div>
+                      1
+                    </div>
+                  </td>
+                  <td>
+                    <div>
+                      مرة واحدة
+                    </div>
+                  </td>
+                  <td>
+                    <div>
+                        <div class="flx_bx flx_start">
+                          <span>
+                            <i class="fa-solid fa-ticket"></i>
+                          </span>
+                          <h2>
+                            تذكرة رقم 45.pdf
+                            <p>9mb . PDF</p>
+                          </h2>
+                          <a href="../assets/word-file/mahmoud-mohamed.docx" download="file name" class="btn btn_" pTooltip="تحميل الملف" tooltipPosition="top" >
+                            <i class="fa-solid fa-download"></i>
+                          </a>
+                        </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div>
+                      1
+                    </div>
+                  </td>
+                  <td>
+                    <div>
+                        <div class="flx_bx flx_start">
+                          <div class="img">
+                            <img src="../assets/images/Image-30.png" alt="image">
+                          </div>
+                          <div class="txt">
+                            <h4>محمد الغريب</h4>
+                            <p>0123456789</p>
+                          </div>
+                        </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div>
+                      C-101
+                    </div>
+                  </td>
+                  <td>
+                    <div>
+                      $40
+                    </div>
+                  </td>
+                  <td>
+                    <div class="customWidth_320p" pTooltip="سينما مصر , مول العرب , برج الأطنان , سرايا القبة سينما مصر , مول العرب , برج الأطنان , سرايا القبة سينما مصر , مول العرب , برج الأطنان , سرايا القبة سينما مصر , مول العرب , برج الأطنان , سرايا القبة" tooltipPosition="top">
+                        سينما مصر , مول العرب , برج الأطنان , سرايا القبة سينما مصر , مول العرب , برج الأطنان , سرايا القبة سينما مصر , مول العرب , برج الأطنان , سرايا القبة سينما مصر , مول العرب , برج الأطنان , سرايا القبة 
+                    </div>
+                  </td>
+                  <td>
+                    <div>
+                      1
+                    </div>
+                  </td>
+                  <td>
+                    <div>
+                      مرة واحدة
+                    </div>
+                  </td>
+                  <td>
+                    <div>
+                        <div class="flx_bx flx_start">
+                          <span>
+                            <i class="fa-solid fa-ticket"></i>
+                          </span>
+                          <h2>
+                            تذكرة رقم 45.pdf
+                            <p>9mb . PDF</p>
+                          </h2>
+                          <a href="../assets/word-file/mahmoud-mohamed.docx" download="file name" class="btn btn_" pTooltip="تحميل الملف" tooltipPosition="top" >
+                            <i class="fa-solid fa-download"></i>
+                          </a>
+                        </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div>
+                      1
+                    </div>
+                  </td>
+                  <td>
+                    <div>
+                        <div class="flx_bx flx_start">
+                          <div class="img">
+                            <img src="../assets/images/Image-30.png" alt="image">
+                          </div>
+                          <div class="txt">
+                            <h4>محمد الغريب</h4>
+                            <p>0123456789</p>
+                          </div>
+                        </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div>
+                      C-101
+                    </div>
+                  </td>
+                  <td>
+                    <div>
+                      $40
+                    </div>
+                  </td>
+                  <td>
+                    <div class="customWidth_320p" pTooltip="سينما مصر , مول العرب , برج الأطنان , سرايا القبة سينما مصر , مول العرب , برج الأطنان , سرايا القبة سينما مصر , مول العرب , برج الأطنان , سرايا القبة سينما مصر , مول العرب , برج الأطنان , سرايا القبة" tooltipPosition="top">
+                        سينما مصر , مول العرب , برج الأطنان , سرايا القبة سينما مصر , مول العرب , برج الأطنان , سرايا القبة سينما مصر , مول العرب , برج الأطنان , سرايا القبة سينما مصر , مول العرب , برج الأطنان , سرايا القبة 
+                    </div>
+                  </td>
+                  <td>
+                    <div>
+                      1
+                    </div>
+                  </td>
+                  <td>
+                    <div>
+                      مرة واحدة
+                    </div>
+                  </td>
+                  <td>
+                    <div>
+                        <div class="flx_bx flx_start">
+                          <span>
+                            <i class="fa-solid fa-ticket"></i>
+                          </span>
+                          <h2>
+                            تذكرة رقم 45.pdf
+                            <p>9mb . PDF</p>
+                          </h2>
+                          <a href="../assets/word-file/mahmoud-mohamed.docx" download="file name" class="btn btn_" pTooltip="تحميل الملف" tooltipPosition="top" >
+                            <i class="fa-solid fa-download"></i>
+                          </a>
+                        </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div>
+                      1
+                    </div>
+                  </td>
+                  <td>
+                    <div>
+                        <div class="flx_bx flx_start">
+                          <div class="img">
+                            <img src="../assets/images/Image-30.png" alt="image">
+                          </div>
+                          <div class="txt">
+                            <h4>محمد الغريب</h4>
+                            <p>0123456789</p>
+                          </div>
+                        </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div>
+                      C-101
+                    </div>
+                  </td>
+                  <td>
+                    <div>
+                      $40
+                    </div>
+                  </td>
+                  <td>
+                    <div class="customWidth_320p" pTooltip="سينما مصر , مول العرب , برج الأطنان , سرايا القبة سينما مصر , مول العرب , برج الأطنان , سرايا القبة سينما مصر , مول العرب , برج الأطنان , سرايا القبة سينما مصر , مول العرب , برج الأطنان , سرايا القبة" tooltipPosition="top">
+                        سينما مصر , مول العرب , برج الأطنان , سرايا القبة سينما مصر , مول العرب , برج الأطنان , سرايا القبة سينما مصر , مول العرب , برج الأطنان , سرايا القبة سينما مصر , مول العرب , برج الأطنان , سرايا القبة 
+                    </div>
+                  </td>
+                  <td>
+                    <div>
+                      1
+                    </div>
+                  </td>
+                  <td>
+                    <div>
+                      مرة واحدة
+                    </div>
+                  </td>
+                  <td>
+                    <div>
+                        <div class="flx_bx flx_start">
+                          <span>
+                            <i class="fa-solid fa-ticket"></i>
+                          </span>
+                          <h2>
+                            تذكرة رقم 45.pdf
+                            <p>9mb . PDF</p>
+                          </h2>
+                          <a href="../assets/word-file/mahmoud-mohamed.docx" download="file name" class="btn btn_" pTooltip="تحميل الملف" tooltipPosition="top" >
+                            <i class="fa-solid fa-download"></i>
+                          </a>
+                        </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="gridFooter_bx">
+             <div class="row">
+              <div class="col-12 col-md-6">
+                  <ul class="flx_bx flx_start">
+                    <li>
+                      <p>عرض </p>
+                    </li>
+                    <li>
+                      <p-dropdown [options]="numbers" optionLabel="name"></p-dropdown>
+                    </li>
+                    <li>
+                      <p>من اصل 250</p>
+                    </li>
+                  </ul>
+              </div>
+              <div class="col-12 col-md-6">
+                <ol class="pagination flx_bx flx_end">
+                  <li class="page-item disabled">
+                    <a class="page-link" href="" pTooltip="السابق" tooltipPosition="top"><i class="fa-solid fa-chevron-right"></i></a>
+                  </li>
+                  <li class="page-item active" aria-current="page">
+                    <a class="page-link" href="#">1</a>
+                  </li>
+                  <li class="page-item">
+                    <a href="" class="page-link">2</a>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#">4</a></li>
+                  <li class="page-item"><a class="page-link" href="#">5</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#" pTooltip="التالي" tooltipPosition="top"><i class="fa-solid fa-chevron-left"></i></a>
+                  </li>
+                </ol>
+              </div>
+             </div>
+          </div>
+        </div>
+      </article>
+    </div><!-- END c/gridView_bx -->
+
+</div><!-- END c/ticket_pg -->
+
+
+
+
+<!-- share popup -->
+<p-dialog [(visible)]="visible" [modal]="true" [style]="{ width: '25vw' }" [draggable]="false" [resizable]="false" [closable]="true">
+    <ng-template pTemplate="header">
+        <h1>مشاركة</h1>
+    </ng-template>
+    <ng-template pTemplate="body">
+      <!-- ShareThis BEGIN --><div class="sharethis-inline-share-buttons"></div><!-- ShareThis END -->
+    </ng-template>
+  </p-dialog>
+  
+  <!-- ticket request -->
+  <p-sidebar [(visible)]="sidebarVisible" [dismissible]="false">
+    <ng-template pTemplate="header">
+      <h1>حجز تذكره جديدة</h1>
+    </ng-template>
+    <ng-template pTemplate="content">
+        <form>
+          <div>
+            564
+          </div>
+        </form>
+    </ng-template>
+  </p-sidebar>

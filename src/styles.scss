@@ -1,0 +1,451 @@
+/* Sass Styles */
+@import "assets/styles/var.scss";
+@import "assets/styles/reset.scss";
+@import "assets/styles/general.scss";
+
+
+/* UI-M7r */
+.mainContainer_bx{
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+}
+.header_bx{
+    height: 75px;
+}
+
+.asideMenu_bx{
+    height: calc(100vh - 75px);
+    width: 136px;
+}
+
+.inner_pg{
+    width: calc(100vw - 136px - 33px);
+    margin-inline-end: 33px;
+}
+
+/* chart box */
+
+.chart_bx{
+    background: $color-white;
+    border: 1px solid #EBEBEB;
+    border-radius: 8px;
+    padding: 22px;
+}
+
+/* ticket box */
+.ticketInfo_bx{
+    background: url(assets/images/WM_ticCard.svg) no-repeat center $color-Primary;
+    background-size: cover;
+    border-radius: 12px;
+    padding: 26px 32px;
+    height: 264px;
+    position: relative;
+    overflow: hidden;
+
+    &::after, &::before{
+        content: '';
+        position: absolute;
+        top: 143px;
+        right: -10px;
+        width: 27px;
+        height: 27px;
+        border-radius: 50px;
+        background: $color-white;
+    }
+
+    &::before{
+        top: 143px;
+        right: initial;
+        left: -10px;
+    }
+
+    .top_card{
+        padding-bottom: 17px;
+
+        h1{
+            font-size: 16px;
+            font-weight: 600;
+            color: $color-white;
+            text-align: center;
+        }
+
+        .btn_wthoutline{
+            position: absolute;
+            left: 32px;
+            top: 24px;
+            font-size: 22px;
+            color: $color-white;
+        }
+
+        .flx_bx {
+            width: fit-content;
+            background: $color-white;
+            border-radius: 8px;
+            margin: 21px auto 11px;
+            padding: 8px 16px;
+            border: 1px dashed #DDDDDD;
+
+                p{
+                    font-size: 16px;
+                    font-weight: 600;
+                    color: $color-Secondary;
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+                    margin-inline-end: 16px;
+                }
+
+                .card{
+                    border: none;
+
+                        a{
+                            color: $color-Primary;
+                            font-size: 18px;
+                        }
+                }
+        }
+
+        h3{
+            font-size: 14px;
+            font-weight: 500;
+            color: $color-white;
+            text-align: center;
+        }
+    }
+
+    .bottom_card{
+        position: relative;
+        padding-top: 15px;
+
+        &::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 2px;
+            border: 2px dashed rgba($color: $color-white, $alpha: 0.4);
+        }
+
+        .offer_bx {
+            align-items: end;
+        }
+
+        h2{
+            font-size: 16px;
+            font-weight: 600;
+            color: $color-white;
+            margin-inline-end: 17px;
+
+            span{
+                display: block;
+                margin-top: 13px;
+            };
+        }
+
+        a{
+
+            i{
+                transform: rotate(-95deg);
+            }
+        }
+
+        .qr_bx {
+
+            img{
+                width: 82px;
+                height: 82px;
+                border-radius: 4px;
+            }
+        }
+    }
+}
+
+/* grid area */
+.gridView_bx{
+    margin-top: 26px;
+
+        .title_bx{
+
+            h1{
+                margin-inline-end: 17px;
+            }
+
+
+        }
+
+        .form-switch{
+            padding: 0 !important;
+            margin-inline-end: 20px;
+            
+
+            .form-check-label{
+                font-weight: 500;
+                font-size: 14px;
+                color: #9C9D9F;
+            }
+
+            .form-check-input{
+                margin-left: 8px;
+                float: right;
+                height: 18px;
+            width: 34px;
+            }
+
+            .form-check-input:checked {
+                background-color: $color-Primary;
+                border-color: $color-Primary;
+            }
+        }
+}
+
+
+/* Grid */
+.grid_bx{
+    background: $color-white;
+    border: 1px solid #F3F3F5;
+    border-radius: 8px;
+    padding: 8px;
+}
+
+.grid_bx .table thead th {
+    text-align: center;
+    font-weight: 500;
+    font-size: 14px;
+    color: #ABAAB1;
+    background: #f8f8fa;
+    border: none !important;
+    height: 41px;
+    line-height: 41px;
+}
+
+.grid_bx .table thead th, .grid_bx .table tbody tr td {
+    padding: 6px 8px!important;
+    overflow: hidden;
+    text-align: center !important;
+}
+
+.grid_bx .table thead th:first-child{
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+.grid_bx .table thead th:last-child{
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+
+.grid_bx .table thead th>div,.grid_bx .table tbody td>div {
+    width: max-content;
+    overflow: hidden;
+    text-align: center !important;
+    margin: 0 auto;
+}
+
+.customWidth_320p {
+    width: 320px !important;
+    text-overflow: ellipsis;
+     overflow: hidden; 
+     height: 33px;
+    line-height: 33px;
+     white-space: nowrap;
+}
+
+.grid_bx .table tbody tr td {
+    text-align: start;
+    font-weight: 500;
+    font-size: 14px;
+    color: $color-Secondary;
+    border-bottom: 1px solid #e9ecef;
+    vertical-align: middle;
+    text-overflow: ellipsis;
+    overflow: hidden
+}
+
+.grid_bx .table tbody tr td{
+
+    &:first-child{
+        color: #898995;
+    }
+
+    div{
+
+        img{
+            width: 30px;
+            height: 30px;
+            border-radius: 50px;
+            margin-inline-end: 8px;
+            display: block;
+        }
+
+        h4{
+            font-weight: 500;
+            font-size: 14px;
+            margin-bottom: 4px;
+        }
+
+        P{
+            font-weight: 400;
+            font-size: 14px;
+            color: #92A1AD;
+        }
+    }
+
+    div{
+
+        .flx_bx.flx_start{
+
+            span{
+                border-radius: 8px;
+                height: 31px;
+                line-height: 31px;
+                width: 31px;
+                background: rgba($color: $color-Primary, $alpha: 0.1);
+                color: $color-Primary;
+                font-size: 13px;
+                text-align: center;
+                margin-inline-end: 8px;
+
+                    i{
+                        transform: rotate(-45deg);
+                    }
+            }
+
+            h2{
+                font-weight: 500;
+                font-size: 14px;
+                
+                text-align: start;
+            }
+
+            p{
+                font-weight: 500;
+                font-size: 14px;
+                text-align: start;
+                margin-top: 4px;
+                color: #92A1AD;
+            }
+
+            a{
+                color: $color-Primary;
+                font-size: 14px;
+                height: 31px;
+                line-height: 31px;
+                width: 31px;
+                text-align: center;
+                border: 1px solid $color-Primary !important;
+                border-radius: 8px !important;
+                margin-inline-start: 22px;
+                @extend %transation;
+
+                    &:hover{
+                        color: $color-white;
+                        background: $color-Primary;
+                        @extend %transation;
+                    }
+            }
+        }
+    }
+}
+
+.grid_bx .table tbody tr:hover td{
+    background: rgba($color: $color-Primary, $alpha: 0.1) !important;
+}
+
+.grid_bx .table tr th .fa-arrow-right-arrow-left{
+    transform: rotate(90deg);
+    cursor: pointer;
+}
+
+
+.gridFooter_bx{
+
+    ul{
+
+        li{
+
+            p{
+                color: #333;
+                font-size: 14px;
+                font-weight: 500;
+            }
+
+            p-dropdown{
+                margin: 0 10px;
+            }
+        }
+    }
+
+    .pagination {
+
+        li{
+
+            a{
+                background: none;
+                margin: 0 6px;
+                padding: 0 2px;
+                color: #7E8299;
+                font-size: 14px;
+                font-weight: 500;
+                text-align: center;
+                border-radius: 5px;
+                height: 27px;
+                line-height: 27px;
+                min-width: 27px;
+                display: block;
+                @extend %transation;
+
+                    &:hover{
+                        color: $color-white;
+                        background: $color-Primary;
+                        @extend %transation;
+                    }
+
+            }
+
+            &.active{
+
+                a{
+
+                    color: $color-white;
+                        background: $color-Primary;
+                        @extend %transation;
+
+                    &:hover{
+                        color: $color-white;
+                        background: $color-Primary;
+                        @extend %transation;
+                    }
+                }
+            }
+
+            &.disabled{
+                
+                a{
+                    color: #D8D8E5;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive */
+@import "assets/styles/_responsive.scss";
