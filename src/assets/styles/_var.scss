@@ -1,0 +1,32 @@
+
+/* Primary COLORS */
+$color-Primary: #8A74F9;
+$color-Secondary: #1C1C28;
+
+/* General COLORS */
+$color-white: #FFFFFF;
+$color-dark: #000;
+$color-green: #10D171;
+$color-red: #ff7676;
+
+/* BG COLORS */
+$color-body: #F3F5F7;
+
+
+/* FLEX */
+%flx-bx{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* SHADOW */
+%shadow-color{
+    box-shadow: 0 0 15px -9px #363636;
+}
+
+/* Transation */
+%transation{
+  transition: all 0.3s ease-in-out;
+}

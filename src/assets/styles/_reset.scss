@@ -1,0 +1,57 @@
+*{
+    padding: 0;
+    margin: 0;
+    outline: 0;
+}
+body{
+    font-family: 'Noto Kufi Arabic', sans-serif !important;
+    text-transform: capitalize;
+    font-weight: 200;
+    background: $color-body;
+}
+.p-element, p-chart *, canvas *{
+    font-family: 'Noto Kufi Arabic', sans-serif !important;
+}
+a{
+    text-decoration: none;
+}
+ul, ol, li, h1, h2, h3, h4, h5, p, span{
+    padding-inline: 0;
+    margin-block: 0;
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    list-style: none;
+}
+a, button{
+    cursor: pointer !important;
+    border: none !important;
+  }
+  
+  
+  /* SCROLL_BAR Works on Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: $color-Primary transparent;
+  }
+  
+  /* Works on Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: $color-Primary;
+    border-radius: 20px;
+  }
+
+  /* Direction LTR */
+  [dir="rtl"]{
+    direction: rtl;
+    text-align: right;
+  }
