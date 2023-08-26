@@ -11,7 +11,43 @@
 }
 
 @media (max-width: 1024px) {
-   
+    body{
+        padding: 20px;
+    }
+    .mainContainer_bx{
+        display: initial;
+    }
+    .asideMenu_bx{
+        width: 100%;
+        height: initial;
+    }
+
+    .inner_pg{
+        width: 100%;
+    }
+
+    .ticketInfo_bx .top_card h1 {
+        font-size: 14px;
+    }
+    .ticketInfo_bx .top_card .flx_bx p {
+        font-size: 14px;
+    }
+    .ticketInfo_bx .bottom_card h2 {
+        font-size: 14px;
+    }
+    .ticketInfo_bx .bottom_card h2 span {
+        display: block;
+        margin-top: 8px;
+    }
+
+    .ticketInfo_bx .top_card .btn_wthoutline {
+        left: 12px;
+        top: 12px;
+    }
+
+    .p-dialog{
+        width: 50vw !important;
+    }
 }
 
 @media (max-width: 992px) {
@@ -19,21 +55,132 @@
 }
 
 @media (max-width: 768px) {
+   .mainInfo_bx{
    
+    article{
+        
+        .col-12{
+            width: 100%;
+        }
+
+        .ticketInfo_bx{
+            margin-top: 14px;
+        }
+    }
+   }
+
+   .gridView_bx{
+
+    .title_bx{
+
+        .col-12{
+            width: 100%;
+        }
+
+        .flx_end{
+            justify-content: space-between;
+            margin-top: 12px;
+        }
+    }
+   }
 }
 
 @media (max-width: 576px) {
-   
+   .mainInfo_bx{
+
+    .title_bx{
+
+        .col-12{
+            width: 50%;
+        }
+    }
+   }
+
+   .gridFooter_bx{
+
+    .flx_bx {
+        justify-content: center;
+    }
+    ul{
+        margin-bottom: 12px;
+    }
+   }
+
+   .p-dialog{
+    width: 80vw !important;
+}
 }
 
 @media (max-width: 480px) {
-   
+    .p-input-icon-right{
+        width: 224px;
+        overflow: hidden;
+
+        .p-inputtext{
+            width: 100%;
+        }
+    }
 }
 
 @media (max-width: 340px) {
-   
+    .mainInfo_bx{
+
+        .title_bx{
+    
+            .col-12{
+                width: 100%;
+            }
+        }
+
+        .start_bx{
+            margin-bottom: 6px;
+        }
+
+        .end_bx{
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+        }
+       }
+
+       .ticketInfo_bx .bottom_card{
+
+        .start_bx, .end_bx{
+        width: 50%;
+       }
+    }
+
+       .ticketInfo_bx .bottom_card .qr_bx img {
+        width: 62px;
+        height: 62px;
+       }
+
+       .p-input-icon-right {
+        width: 210px;
+       }
+
+       .chart_bx {
+        padding: 12px;
+    }
 }
 
 @media (max-width: 300px) {
-   
+    .p-input-icon-right {
+        width: 165px;
+       }
+       .p-calendar .p-inputtext {
+        width: 218px !important;
+    }
+    .ticketInfo_bx .top_card h1 {
+        font-size: 12px;
+    }
+
+    .ticketInfo_bx .top_card .btn_wthoutline {
+        font-size: 20px;
+    }
+
+    .ticketInfo_bx .top_card .flx_bx p {
+        font-size: 11px;
+    }
+
 }
