@@ -92,6 +92,7 @@ export class ListPageComponent {
     
     this.options = {
       animation: true,
+      responsive: true,
         stacked: false,
         maintainAspectRatio: false,
         aspectRatio: 0.6,
